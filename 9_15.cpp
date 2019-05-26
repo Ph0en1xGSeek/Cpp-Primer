@@ -8,7 +8,6 @@
 #include <array>
 #include <set>
 #include <stdio.h>
-#define NUM_CHARACTER 26
 
 using namespace std;
 

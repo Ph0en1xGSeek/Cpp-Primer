@@ -7,16 +7,20 @@
 #include <algorithm>
 #include <array>
 #include <set>
+#include <deque>
 #include <stdio.h>
 
 using namespace std;
 
 int main() {
-    list<const char*> l = {"aaa", "bbb", "ccc"};
-    vector<string> vec;
-    vec.assign(l.begin(), l.end());
-    for(auto str: vec) {
-        cout << str << endl;
+    deque<string> dq;
+    string tmp_str;
+    while(cin >> tmp_str) {
+        dq.push_back(tmp_str);
     }
+    for(deque<string>::iterator iter = dq.begin(); iter != dq.end(); ++iter) {
+        cout << *iter << ' ';
+    }
+    cout << endl;
     return 0;
 }
