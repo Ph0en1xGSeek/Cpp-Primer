@@ -28,7 +28,8 @@ bool check_size(const string &str, size_t sz) {
 
 void elimDups(vector<string> &vec) {
     stable_sort(vec.begin(), vec.end());
-    unique(vec.begin(), vec.end());
+    auto end_unique = unique(vec.begin(), vec.end());
+    vec.erase(end_unique, vec.end());
 }
 
 void biggies(vector<string> &words, vector<string>::size_type sz) {
