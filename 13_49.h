@@ -1,5 +1,5 @@
-#ifndef cpp_13_39_h
-#define cpp_13_39_h
+#ifndef __MAIN_H__
+#define __MAIN_H__
 
 #include <string>
 #include <memory>
@@ -10,8 +10,10 @@ class StrVec {
 public:
     StrVec(): elements(nullptr), first_free(nullptr), cap(nullptr) {};
     StrVec(const StrVec&);
+    StrVec(StrVec &&) noexcept;
     StrVec(std::initializer_list<std::string>);
     StrVec& operator=(const StrVec&);
+    StrVec& operator=(StrVec &&) noexcept;
     ~StrVec();
 
     void push_back(const std::string &);
