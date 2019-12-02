@@ -12,7 +12,7 @@
 #include <map>
 #include <memory>
 
-#include "14_28_StrBlobPtr.h"
+#include "14_30_StrBlobPtr.h"
 
 int main() {
     StrBlob sb;
@@ -21,7 +21,7 @@ int main() {
         sb.push_back(str);
     }
     for(StrBlobPtr iter(sb.begin()), pend(sb.end()); iter != pend; iter++) {
-        std::cout << iter.deref() << std::endl;
+        std::cout << *iter << " " << iter->size() << std::endl;
     }
     std::cout << "subscript " << sb[0] << std::endl;
 
